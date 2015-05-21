@@ -1,0 +1,38 @@
+[
+	{"categoria":"vari", "nome":"cacao amaro polvere", "proteine":20.4,"grassi":25.6,"carbo":11.5, "fibre":33,"Na":21,"K":1524,"Fe":14.3, "Ca":51, "P":685, "Mg":499, "Zn":6.81, "Cu":3.79, "Se":0.0143, "B1":0.08, "B2":0.3, "B3":1.7, "A":0.007, "C":0, "E":0.1 },
+	{"categoria":"vari", "nome":"farina di castagne", "proteine":6.1,"grassi":3.7,"carbo":76.2, "fibre":0,"Na":11,"K":847,"Fe":3.2, "Ca":50, "P":164, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0.23, "B2":0.37, "B3":1, "A":0, "C":0, "E":0 },
+	{"categoria":"vari", "nome":"hamburger di soia", "proteine":15.7,"grassi":6.3,"carbo":14.3,"fibre":4.9,"Na":569,"K":333,"Fe":2.41, "Ca":136, "P":206,"Mg":56,"Zn":1.26, "Cu":0.2, "Se":0.0226, "B1":2.65, "B2":0.24, "B3":3.75, "A":0.001,"C":4.5,"E":0.23 }, 
+	{"categoria":"vari", "nome":"lievito di birra", "proteine":12.1,"grassi":0.4,"carbo":1.1, "fibre":6.9,"Na":16,"K":610,"Fe":4.9, "Ca":13, "P":394, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0.71, "B2":1.65, "B3":11.2, "A":0, "C":0, "E":0 },
+	{"categoria":"vari", "nome":"olive nere", "proteine":1.6,"grassi":25.1,"carbo":0.8,"fibre":3.9,"Na":54,"K":432,"Fe":1.6, "Ca":62,"P":18,"Mg":0, "Zn":0,"Cu":0,"Se":0, "B1":0.1, "B2":0.1, "B3":1,"A":0.015, "C":0,"E":0 },
+	{"categoria":"vari", "nome":"olive verdi", "proteine":0.8,"grassi":15,"carbo":1,"fibre":3,"Na":0,"K":42,"Fe":1.6, "Ca":64,"P":14,"Mg":10,"Zn":0.04,"Cu":0.01,"Se":0.0009, "B1":0.03, "B2":0.08, "B3":0.5, "A":0.048, "C":0, "E":3.70 },
+	{"categoria":"vari", "nome":"olive verdi in salamoia", "proteine":1.2,"grassi":11,"carbo":1,"fibre":0,"Na":0,"K":0,"Fe":0, "Ca":0,"P":0,"Mg":0, "Zn":0,"Cu":0,"Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":0 },
+	{"categoria":"vari", "nome":"pappa reale", "proteine":10,"grassi":6,"carbo":14, "fibre":0,"Na":0,"K":0,"Fe":0, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0.13, "B2":0.75, "B3":0.39, "A":0, "C":0, "E":0 },
+	{"categoria":"vari", "nome":"pop corn", "proteine":12,"grassi":4.2,"carbo":77.9, "fibre":15.1,"Na":4,"K":301,"Fe":2.7, "Ca":10, "P":300, "Mg":144, "Zn":3.44, "Cu":0.42, "Se":0, "B1":0.2, "B2":0.28, "B3":1.95, "A":0.020, "C":0, "E":0.23 },
+	{"categoria":"vari", "nome":"salsa di soia", "proteine":8.7,"grassi":0,"carbo":8.3, "fibre":0,"Na":5720,"K":360,"Fe":2.7, "Ca":19, "P":210, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0.05, "B2":0.13, "B3":3.4, "A":0, "C":0, "E":0 },
+	{"categoria":"vari", "nome":"tofu", "proteine":15.8,"grassi":8.7,"carbo":4.3,"fibre":2.3,"Na":14,"K":237, "Fe":2.66, "Ca":683, "P":190, "Mg":58, "Zn":1.57, "Cu":0.38, "Se":0.017, "B1":0.16, "B2":0.1, "B3":0.38, "A":0,"C":0.2,"E":0 },
+	{"categoria":"vari", "nome":"tofu fritto", "proteine":17.2, "grassi":20.2, "carbo":10.5, "fibre":3.9, "Na":372, "K":146, "Fe":4.87, "Ca":372, "P":146, "Mg":60, "Zn":1.99, "Cu":0.4, "Se":0.028, "B1":0.17, "B2":0.05, "B3":0.1,"A":0.001,"C":0,"E":0.04 },
+	{"categoria":"vari", "nome":"zuppa di miso", "proteine":11.7,"grassi":6,"carbo":26.5,"fibre":5.4,"Na":3728,"K":210,"Fe":2.49, "Ca":57, "P":159, "Mg":48, "Zn":2.56, "Cu":0.42, "Se":0.007, "B1":0.1, "B2":0.23, "B3":0.91,"A":0.004,"C":0,"E":0.01 }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+[
+	{"categoria":"bevande", "nome":"birra chiara", "proteine":0.2,"grassi":0,"carbo":3.5, "fibre":0,"Na":10,"K":35,"Fe":0,"Ca":1, "P":28, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0.03, "B3":0.9, "A":0, "C":1, "E":0},
+	{"categoria":"bevande", "nome":"vino bianco", "proteine":0,"grassi":0,"carbo":0, "fibre":0,"Na":4,"K":61,"Fe":1,"Ca":9, "P":74, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0.01, "B2":0.05, "B3":0, "A":0, "C":0, "E":0 },
+	{"categoria":"bevande", "nome":"vino rosso", "proteine":0,"grassi":0,"carbo":0, "fibre":0,"Na":4,"K":61,"Fe":1,"Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":0 }
+]

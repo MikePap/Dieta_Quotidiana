@@ -1,0 +1,16 @@
+[
+	{"categoria":"oli", "nome":"burro", "proteine":0.8,"grassi":83.4,"carbo":1.1, "fibre":0,"Na":7,"K":15,"Fe":1.09, "Ca":25, "P":16, "Mg":15, "Zn":0.26, "Cu":0, "Se":0.001, "B1":0, "B2":0.07, "B3":0.02, "A":0.930, "C":0, "E":2.4  },
+	{"categoria":"oli", "nome":"burro di arachidi", "proteine":25.1,"grassi":50.4,"carbo":19.6, "fibre":6,"Na":0,"K":649,"Fe":1.87, "Ca":43, "P":358, "Mg":154, "Zn":2.9, "Cu":0.47, "Se":0.0056, "B1":0, "B2":0, "B3":13.4, "A":0, "C":0, "E":9},
+	{"categoria":"oli", "nome":"margarina vegetale", "proteine":0.6,"grassi":84,"carbo":0.4, "fibre":0,"Na":800,"K":5,"Fe":0, "Ca":20, "P":16, "Mg":0, "Zn":0.11, "Cu":0, "Se":0, "B1":0.01, "B2":0, "B3":0, "A":0.075, "C":0, "E":12.4 },
+	{"categoria":"oli", "nome":"olio di arachide", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0.1, "Ca":0, "P":0, "Mg":0, "Zn":0.01, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":19.1 },
+	{"categoria":"oli", "nome":"olio di cocco",  "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":0.9},
+	{"categoria":"oli", "nome":"olio di colza", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0.1, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":22.2},
+	{"categoria":"oli", "nome":"olio di girasole", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":68},
+	{"categoria":"oli", "nome":"olio di lino", "proteine":0,"grassi":100,"carbo":0,"fibre":0,"Na":0,"K":0,"Fe":0, "Ca":0,"P":0,"Mg":0,"Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0,"C":0,"E":17.5 }, 
+	{"categoria":"oli", "nome":"olio di mais", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0.1, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":34.5 },
+	{"categoria":"oli", "nome":"olio di oliva", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0.1, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0.003, "C":0, "E":18.5 },
+	{"categoria":"oli", "nome":"olio di palma", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0.1, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":33.1 },
+	{"categoria":"oli", "nome":"olio di sesamo", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":0 },
+	{"categoria":"oli", "nome":"olio di soia", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0,"Fe":0.1, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0, "C":0, "E":18.5 },
+	{"categoria":"oli", "nome":"olio extravergine di oliva", "proteine":0,"grassi":99.9,"carbo":0, "fibre":0,"Na":0,"K":0.2,"Fe":0, "Ca":0, "P":0, "Mg":0, "Zn":0, "Cu":0, "Se":0, "B1":0, "B2":0, "B3":0, "A":0.036, "C":0, "E":22.4 }
+]

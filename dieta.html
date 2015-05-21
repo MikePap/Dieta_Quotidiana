@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<title>Dieta giornaliera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Applicazione per creare diete giornaliere per imparare a conoscere le sostanze nutritive che mangiamo, compreso le calorie  e confrontarle con i nostri fabbisogni" />
+<meta name="keywords" content="nutrienti, dieta giornaliera, calcola calorie, calcola peso ideale, proprietà alimenti" />
+<link rel=icon href="kaipai.ico"  sizes="16x16" type="image/png" />
+<link rel="shortcut icon" href="kaipai.ico" />
+<link rel="stylesheet" href="css/min/dieta-app.css" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Emblema+One:400" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js">IE7_PNG_SUFFIX=".png";</script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript"  src="JS/selectivizr-min.js"></script>
+<script type="text/javascript"  src="JS/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="int" title="Utili Consigli" >?</div> 
+<div id="spiegaz">
+I <span class="arancione">nutrienti</span> sono la vita. Ci garantiscono il ricambio dei tessuti, la fornitura dell'energia e lo svolgimento di tutti i processi metabolici vitali. Una loro carenza o eccesso provoca problemi più o meno gravi.<br />
+L'applicazione vi permette sia di controllare la vostra dieta, per verificare i nutrienti che assumete nei vostri pasti, sia di creare una dieta ideale da seguire in base ai vostri fabbisogni. <br />
+Dopo aver selezionato uno o più alimenti noterete due pulsanti: <ins>Dieta in pausa</ins> e <ins>Elimina dieta</ins>. Il primo vi dà la possibilità di ripristinare gli alimenti  scelti se, nel caso, chiudete l'applicazione. In pratica, anche se la dieta non è completata, cliccando sul pulsante non fate altro che memorizzare quella parte di dieta per poi riprenderla in un secondo momento. Quando decidete che la dieta creata non è più utile e volete crearne un'altra cliccando su <ins>Elimina dieta</ins> la eliminate completamente. <br />
+Il tutto è abbastanza intuitivo: incominciate cliccando sul pulsante <ins>Scegli i pasti</ins> e proseguite. Tenete a bada il confronto tra  la colonna <span class="arancione">RDA</span> che riporta i valori del fabbisogno giornaliero e la colonna <span class="arancione">dieta</span> che riporta i valori degli alimenti assunti nei pasti. E' possibile spostare la posizione degli alimenti scelti con il trascinamento. <br />
+Per informazioni sulle fonti e sui criteri adottati nell'applicazione nonchè per un approfondimento sui nutrienti, visitate: <a href="http://www.kaipai.it/">www.kaipai.it</a>
+																											<div id="xInfo" title="Chiudi" >&times;</div> 
+</div> 
+
+<div id="pesoStaturaEta">
+	<section>
+		<p class="size0-9 marcato rosso">I campi seguenti sono tutti obbligatori </p>
+		<div>
+			<label>Donne</label>
+			<input type="radio" name="fom" id="femmineLaf" value="femmine"  />
+			<label>Uomini</label>
+			<input type="radio" name="fom" id="maschiLaf" value="maschi" /> 
+		</div>
+		<div>
+			<span>Il vostro peso </span> <span id="boxPeso"></span> 
+		</div>
+		<div>
+			<span>La vostra statura </span> <span id="boxStatura"></span> 
+		</div>
+		<div>
+			<span>La vostra età</span>	<span id="boxEta"></span> 
+		</div>
+		<div>
+			<span>Livello di attività </span>
+			<select id="listaAttivita">
+				<option value="0">---</option>
+				<option value="1.4">Sedentario</option>
+				<option value="1.6">Moderato</option>
+				<option value="1.9">Attivo</option>
+				<option value="2.5">Sportivo</option>
+			</select>
+		</div>
+		<div>
+			<button id="invioFE">Invia</button>
+		</div> 
+		<div id="boxRisultato"></div> 
+	</section>
+	<div id="xBoxCalcolaCalorie">&times;</div> 
+	<div id="aggiornaPagina">Chiudi</div> 
+</div> 
+
+<div id="suggerimento"></div> 
+
+	<div id="scuro"></div> 
+	<div id="eliminazioneDieta">
+		<button id="confermaX">Conferma Eliminazione</button>
+		<button id="annullaX">Ritorna Indietro</button> 
+	</div> 
+
+<header>
+	<div class="logoKaiPai"><img src="img/logoKaiPai.png" alt="logo sito" title="" />	</div>
+	<div class="testoLogoKP">
+		<span class="titoloKP">Kai Pai</span>
+		<span class="sloganKP">mangiare il giusto con gusto</span>
+	</div>  
+</header>
+<main>
+<div id="content">
+	<h1 id="h1Dieta" >Dieta del giorno</h1>
+	<div id="ceckCalorie">
+Per poter utilizzare l'applicazione dovete prima di tutto conoscere il vostro <q>fabbisogno calorico giornaliero</q>: 
+		<div id="showBoxCFC">
+			Calcolo fabbisogno calorico
+		</div>
+	</div> 
+	<div id="fabbisogniEnergetici">
+Iniziate con "Scegli i pasti" e seguite selezionando gli alimenti per ogni pasto della giornata. Abbiate cura di indicare la quantità  in grammi il più accuratamente possibile. <br />
+<span class="size0-8 rossano"><b>* RDA:</b> valore del fabbisogno giornaliero</span>
+	</div>
+	<div id="memorizzaDieta">
+		<div>Potete mettere la dieta in pausa se incompleta e riprenderla in un'altro momento della giornata. Oppure potete eliminarla per rifarne una nuova
+		</div>
+		<button id="btnDietaPausa">Dieta in pausa</button>
+ 		<button id="btnCancellaDieta">Elimina dieta</button> 
+	</div>
+
+	<button id="btnRiprendiDieta">Riprendi dieta</button>
+	<div id="storeSpan"></div><!--conserva gli span che contengono le proprietà dell'alimento provenienti da "box_propAlimenti2.php" -->
+	<div id="pastiScelti"></div><!-- visualizza gli alimenti scelti  -->
+
+	<div id="macronutrienti">
+		<div>
+			<div class="nomeVM"></div> <div>RDA</div> <div>dieta</div> 
+		</div>
+		<div>	
+			<div class="nomeVM">Carboidrati (g)</div> <div></div> <div>0</div>
+		</div> 
+		<div>
+			<div class="nomeVM">Proteine (g)</div>	<div></div> <div>0</div> 
+		</div>
+		<div>	
+			<div class="nomeVM">Grassi (g)</div> <div></div> <div>0</div> 
+		</div>
+		<div>	
+			<div class="nomeVM">Calorie (Kcal)</div> <div></div>	<div>0</div> 
+		</div>
+	</div> 
+
+	<div id="vitamine-minerali">
+		<div>
+			<div class="nomeVM">Fibre (g) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Sodio (mg) *</div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Potassio (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Ferro (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Calcio (mg) *</div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Fosforo (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Magnesio (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Zinco (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Rame (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Selenio (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Vitamina B1 (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Vitamina B2 (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Vitamina B3(mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Vitamina A (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Vitamina C (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div>	
+			<div class="nomeVM">Vitamina E (mg) </div>	<div></div>	<div>0</div> 	 
+		</div>
+		<div class="infovm">
+			<span>* Sodio: è contenuto in discrete quantità nel sale da cucina</span> <br />
+			<span>* Calcio: è contenuto in buone quantità anche nelle acque che beviamo </span>
+		</div> 
+	</div> 
+
+	<div id="alimentiAlcol"><!--alimenti con alcol-->
+			<div>0</div> <div>0</div> <div>0</div> 
+	</div> 
+	<div id="boxMmostraFVM">
+		<button id="mostraFMV">Mostra minerali e vitamine</button>
+	</div>
+	<div id="veganVegetariano">
+		<button id="btnVeganVeget">Scegli i pasti</button>
+	</div> 
+	<div id="colPranzoCena">
+		<button id="colazione">Colazione</button>
+		<button id="spuntinoAM">Spuntino AM</button>
+		<button id="pranzo">Pranzo</button>
+		<button id="spuntinoPM">Spuntino PM</button>
+		<button id="cena">Cena</button>
+	</div> 
+	<div id="alimVegetariani">
+		<span class="pastoscelto"></span>
+		<button class="pcereali" id="a1">Cereali</button>
+		<button class="plegumi" id="a2">Legumi</button>
+		<button class="pverdure-ortaggi" id="a3">Verdure e Ortaggi</button>
+		<button class="pfrutta-fresca" id="a4">Frutta fresca</button>
+		<button class="pfrutta-secca" id="a5">Frutta secca</button>
+		<button class="poli" id="a6">Oli</button>
+		<button class="pformaggi" id="a7">Formaggi</button>
+		<button class="platte" id="a8">Latte e yogurt</button>
+		<button class="puova" id="a9">Uova</button>
+		<button class="pdolci" id="a10">Dolci</button>
+		<button class="pbevande" id="a11">Bevande</button>
+		<button class="pvari" id="a12">Alimenti Vari</button>
+		<div class="xChiudiCatAlimenti">&times;</div> 
+	</div>
+	<div id="alimentiDiCateg"></div><!-- mostra gli alimenti per ogni categoria -->
+</div><!-- content -->
+</main>
+
+<div id="linkAlSitoKaiPai">
+	<a href="http://www.kaipai.it/">kaipai.it</a>
+</div> 
+
+<script type="text/javascript" src="js/min/dieta_app.js"></script>
+
+</body>
+</html>

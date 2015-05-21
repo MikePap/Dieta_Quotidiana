@@ -1,0 +1,29 @@
+[
+	{
+		"nome":"logo",
+		"srcImg":"../img/logoKaiPai.png",
+		"titleImg":"",
+		"altImg":"logo del sito",
+		"larghezza":"100%",
+		"altezza":"auto"
+
+	},
+	{
+		"nome":"logoHome",
+		"srcImg":"img/logoKaiPai.png",
+		"titleImg":"",
+		"altImg":"logo del sito",
+		"larghezza":"100%",
+		"altezza":""
+	},
+	{
+		"nome":"",
+		"srcImg":"../img/",
+		"titleImg":"",
+		"altImg":"",
+		"larghezza":"",
+		"altezza":""
+	}
+
+
+]

@@ -1,0 +1,763 @@
+/*	schema generale responsive design	*/
+@charset "utf-8";
+
+html,body,div,p,h1,h2,h3,h4,h5,input,textarea,select,span,ul,li,a,img{
+margin: 0;padding:0;
+}
+html{ overflow-y: scroll;  /*force vertical scrollbar in non-IE */ }
+main,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+display:block; margin: 0;padding:0;
+}
+/*  Correct `inline-block` display not defined in IE 8/9. */
+audio,canvas,video { display: inline-block; }
+/* Prevent modern browsers from displaying `audio` without controls. * Remove excess height in iOS 5 devices  */
+audio:not([controls]){ display: none; height: 0; }
+/* Remove text-shadow in selection highlight: h5bp.com/i - These selection declarations have to be separate -  Also: hot pink! (or customize the background color to match your design)  */
+::-moz-selection {background: #3AC3E0; color: #fff; text-shadow: none;}
+::selection {background: #3AC3E0; color: #fff; text-shadow: none;}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active {outline: 0;}
+/* Improve image quality when scaled in IE7: h5bp.com/d - Remove the gap between images and borders on image containers: h5bp.com/e  */
+img {border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle;}
+/* Address differences between Firefox and other browsers */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+/* Correct overflow not hidden in IE9  */
+svg:not(:root) {overflow: hidden;}
+figure {margin: 0;}
+/* Correct font-size not inheriting in all browsers - Remove margins in FF3/4 S5 Chrome -  Define consistent vertical alignment display in all browsers  */
+button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;}
+/* Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet) - Correct inner spacing displayed oddly in IE6/7 */
+button, input {line-height: normal; *overflow: visible;}
+table button, table input {*overflow: auto;}
+/* Display hand cursor for clickable form elements - Allow styling of clickable form elements in iOS  */
+button, input[type="button"], input[type="reset"], input[type="submit"] {cursor: pointer; -webkit-appearance: button;}
+/* Consistent box sizing and appearance  */
+input[type="checkbox"], input[type="radio"] {box-sizing: border-box;}
+input[type="search"] {-webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+/* Remove inner padding and border in FF3/4: h5bp.com/l  */
+button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0;}
+/* Remove default vertical scrollbar in IE6/7/8/9  - Allow only vertical resizing  */
+textarea {overflow: auto; vertical-align: top; resize: vertical;}
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid {background-color: #f0dddd;}
+/* ASSEGNAZIONE DEL "box-sizing:border-box" A TUTTI GLI ELEMENTI DEL DOCUMENTO UTILIZZANDO IL SELETTORE UNIVERSALE * (valido anche in IE 8) */
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}
+
+/* 
+-------------------------------------------------------------------------------------------------
+Stili di base (Default) - Mobile first (320px: iPhone con orientamento portrait) 
+-------------------------------------------------------------------------------------------------
+*/
+
+/*	Elementi base	*/
+
+body{
+font-family: Tahoma, Geneva, sans-serif,  Palatino, Times, serif; text-align:left; font-size:100%; 
+background-color: rgb(255,185,94);   
+}
+header{
+position:relative; margin:0 auto; width:100%; height:150px; background-color: rgb(255,185,94);  z-index:2; 
+}
+div.logoKaiPai{
+position:absolute; top:25px; left:31px; width:100px; height:100px;	
+}
+div.testoLogoKP{
+position:absolute; top:50px; left:140px;  font-size:0.8em; 
+}
+span.titoloKP{
+display:block;
+font-family: 'Emblema One'; color:rgb(90,140,0);
+font-size:2.5em;
+text-shadow: rgb(210,240,45) -1px -1px, #444 2px 2px 2px;
+}
+span.sloganKP{
+font-family: 'Emblema One'; color:rgb(90,140,0);
+font-size:0.8em;
+text-shadow: #fff 1px 1px 1px;
+}
+#content{
+position:relative;  color:#787878; font-size:1.2em; /*z-index:2;*/
+background-color:rgb(255,215,150);
+}
+/*
+footer{
+display:none; 
+position:relative; width:100%; height:150px; padding:0.5em 0; background:rgb(145,130,110); z-index:1;
+}
+*/
+h1,h2,h3,h4,h5,h6{
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h1{
+font-size:1.3em;  padding:1em; color:rgb(70,150,90); text-align:center;
+}
+h2{ 
+font-size:1.1em; padding:0.3em; color:rgb(200,10,10);
+}
+h3{
+font-size:1em; padding:0.3em; color:#8b188e;
+}
+p{
+line-height:1.5em;
+}
+p+p{
+margin-top:0.8em; 
+}
+a, a:link, a:visited{
+text-decoration: none; color:rgb(40,170,40);
+}
+a:hover{
+text-decoration:underline; 
+}
+select{
+background:rgb(145,130,110); color:#fff;
+}
+button{
+color:#777; font-size:1.2em; padding:0.8em;
+background-color:#e5e5e5; 
+background: -moz-linear-gradient(top, #fff, #e1e1e1);	
+background:-webkit-linear-gradient(top, #fff, #e1e1e1);
+background: linear-gradient(top, #fff, #e1e1e1);
+border: 2px ridge #e5e5e5; border-radius:4px;
+}
+button:hover{
+color:#444;
+}
+/*	Fine Elementi base	*/
+
+
+#int{
+position:absolute; top:0; right:0; width:1.5em; font-size:2.5em; text-align:center; 
+background:rgb(80,80,80); color:#fff;
+font-weight:bold; border:5px double	#fff; border-radius:1.5em; z-index:14; cursor:pointer; 
+}
+
+#spiegaz{
+position:absolute; top:-1000px; left:0;
+width:auto;  padding:0.5em; font-size:15px; color:#ff0; background:rgb(80,80,80);  border:1px solid #fff; border-radius:6px; z-index:15; /*display:none;*/
+}
+
+
+#xInfo{
+margin:0.1em 0 0 auto; width:1.3em; font-size:1.5em; text-align:center; 
+background:#555; color:red; 
+border: 2px solid; border-radius:1em; cursor:pointer;
+}
+#xInfo:hover{
+color:lime;
+}
+
+#pesoStaturaEta{
+position:absolute; top:0; left:0;  
+width:100%; margin:0;  font-size:0.85em; color:#ff0; background:#444; z-index:60; display:none;
+}
+#pesoStaturaEta > section{
+margin:0 auto; width:100%; padding:1em 0.5em;
+border:1px solid; border-radius:5px;
+}
+#pesoStaturaEta > section *+*{
+line-height:2em;
+}
+
+#pesoStaturaEta > section > div > span:first-child{
+display: inline-block; width:50%; 	margin-right:0.5em; 
+}
+
+#pesoStaturaEta > section > #boxRisultato > span:first-child{
+width:100%;
+}
+
+#xBoxCalcolaCalorie{
+width:1.5em; margin:0.2em 2px 0  auto; text-align:center;	font-size:3em;	border:1px solid; color:#00f; border-radius:5px; cursor:pointer; font-weight:bold; 
+}
+#xBoxCalcolaCalorie:hover {
+color:#0f0; 
+}
+
+#aggiornaPagina{
+width:5em; margin:0.2em auto 0  auto; text-align:center;	font-size:2em;	border:1px solid; color:#0f0; border-radius:5px; cursor:pointer; font-weight:bold; display:none;
+}
+#aggiornaPagina:hover {
+color:#f00; 
+}
+
+#suggerimento{
+width:100%;  padding:1em; background:rgb(0,25,50); background:rgba(0,25,50,0.7); color:#ff0; text-align:center; font-size:1em;
+position: fixed; top:2px; bottom:auto; left:0; right:0; display:none; z-index:44;
+}
+
+#scuro{
+position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:20; display:none;
+}
+
+#eliminazioneDieta{
+margin:auto; 
+position:absolute; top:0; bottom:0; left:0; right:0; 
+width:100%; height:3em;  text-align:center;   z-index:25; display:none;  /*border:1px solid; */
+}
+
+#eliminazioneDieta button{
+display: inline-block; width:48%; 
+}
+
+
+#ceckCalorie{
+width:100%; /*margin:10px;*/ padding:10px; border:1px solid #ccc; border-radius:5px; 
+}
+#ceckCalorie div{
+margin:10px auto; text-align:center;
+}
+
+#ceckCalorie div {
+width:100%;	text-align:center; padding:0.2em; color:yellow; font-size:0.8em;  border:1px solid; background:#555;  border-radius:5px; cursor:pointer;
+}
+
+#ceckCalorie div:hover{
+color:#0f0;
+}
+
+#fabbisogniEnergetici{
+width:100%; padding:0.5em; font-size:0.9em; 
+}
+
+#memorizzaDieta{
+width:100%; margin-top:0; text-align:center;  display:none;
+}
+#memorizzaDieta > div{
+/*display:none;*/ text-align:left; font-size:0.9em; padding:0.4em 0.3em; border: 4px double #ff0; border-radius:3px;
+}
+#memorizzaDieta > button{
+width:100%;
+}
+#noMemorizzarla{
+/*display:none;*/
+}
+
+
+#btnRiprendiDieta{
+display:none; width:100%; font-size:1em;
+}
+
+#storeSpan{
+display:none;
+}
+
+#pastiScelti{
+width:100%; padding:0.5em; 
+}
+#pastiScelti div > span {
+display: inline-block; width:14%;
+}
+
+
+#macronutrienti{
+width:100%;  padding: 1% 0; font-size:0.8em; background:#fff;   
+border-top:1px solid #e5e5e5; border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; border-radius:4px;
+}
+#macronutrienti > div{
+margin-left:0.5em; margin-right:0.5em; width:auto; margin-bottom:0.1em;	
+}
+#macronutrienti > div:hover{
+background: #555; border: 1px solid #555; 
+}
+#macronutrienti > div div{
+display:inline-block; border:1px solid #ccc;
+}
+#macronutrienti > div div:nth-child(1) {
+width:55.5%; padding-left:0.3em; background:rgb(250,250,220); color:#646464;
+}
+#macronutrienti > div div:nth-child(2){
+width:20%;	 text-align:center; background:rgb(245,230,210); color:green;
+}
+#macronutrienti > div div:nth-child(3){
+width:20%;	 text-align:center; background:#90ee90; text-align:center; color:#4d4d4d; 
+}
+#macronutrienti  div:nth-child(1) div:nth-child(2), #macronutrienti  div:nth-child(1) div:nth-child(3) {
+background:rgb(145,130,110); color:#fff; 
+}
+#macronutrienti  > div:nth-child(5) div{
+background:#555; color:#fff;
+}
+
+
+#vitamine-minerali{
+width:100%; padding: 0 0; font-size:0.8em; text-align:left;  background:#fff; display:none;
+border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; border-radius:4px;
+}
+#vitamine-minerali > div{
+margin-left:0.5em; margin-right:0.5em; width:auto; margin-bottom:0.1em;	
+}
+#vitamine-minerali > div:hover{
+background: #555; border: 1px solid #555; 
+}
+
+#vitamine-minerali > div div{
+display:inline-block; border:1px solid #ccc;
+}
+
+#vitamine-minerali > div div:nth-child(1) {
+width:55.5%;	/*margin-left:1%;*/ padding-left:0.3em; background:rgb(250,250,220); color:#646464;
+}
+#vitamine-minerali > div div:nth-child(2){
+width:20%;	 text-align:center; background:rgb(245,230,210); color:green;
+}
+#vitamine-minerali > div div:nth-child(3){
+width:20%;	 text-align:center; background:#90ee90; text-align:center; color:#4d4d4d; 
+}
+
+#alimentiAlcol{
+display:none;
+}
+
+#vitamine-minerali > div.infovm{
+border:none; font-size:0.6em; 
+}
+
+#boxMmostraFVM{
+width:100%; 
+}
+#mostraFMV{
+width:100%;	font-size:1em;
+}
+
+
+#veganVegetariano{
+width:100%; margin-top:0.5em;  text-align:center; 
+}
+#veganVegetariano > button{
+width:100%; 
+}
+
+#colPranzoCena{
+position:relative; margin: 0.5em auto; width:100%;  text-align:center; display:none;   
+}
+#colPranzoCena > button{
+display:block; width:100%; 
+}
+
+#alimVegetariani {
+width:100%; margin:1em 0; text-align:center;	display:none;
+}
+#alimVegetariani > button{
+display:inline-block;
+width:100%; /*margin-top:0.2em; padding:0.8em;*/
+}
+
+.xChiudiCatAlimenti{
+margin:0.1em 0 0 auto; width:1.3em; font-size:1.5em; text-align:center; 
+background:#555; color:#fff; font-weight:bold;
+border: 2px solid #e5e5e5; border-radius:1.5em; cursor:pointer;
+}
+.xChiudiCatAlimenti:hover{
+color:#f00;
+}
+
+
+#alimentiDiCateg{
+width:100%; margin:0; display:none;
+}
+.catAlimenti{
+width:100%; 
+}
+
+div.divPasto{
+width:100%; border:1px solid #e5e5e5; 
+}
+div.divPasto > span{
+/*display: inline-block;*/ width:32%;
+font-size:1em; padding-left:0.2em; padding-top:0.1em;
+}
+
+div.divPasto > button{
+font-size:1.2em;	padding:0;
+}
+select{
+font-size:1.1em;
+}
+
+#linkAlSitoKaiPai{
+margin:1em 0; padding:0.5em; text-align:center;		/*border: 1px solid;*/
+}
+
+
+/*	Classi comuni */
+.marcato{ font-weight:bold;}
+.sottolineato{ text-decoration: underline;}
+.centrato{ text-align:center;}
+.adestra{text-align:right; }
+.asinistra{text-align:left;}
+.obliquo{ font-style: oblique;}
+/* Colore background */
+.brosso{ background-color:red;}
+.barancione{ background-color:orange;}
+.bverde{ background-color:green;}
+.bazzurro{ background-color:blue;}
+.bblu{ background-color:#03f;}
+.bbianco{ background-color:#fff;}
+.bgiallo{background-color:#ff0;}
+/* Colore caratteri */
+.rosso{ color:#f00;}
+.giallo {color:#ff0;}
+.rossano{ color:rgb(200,100,100);}
+.miorosso{ color:#800000;}
+.vinaccia{ color:rgb(131,0,65);}
+.blu{ color:#00C;}
+.azzurro{ color:#06f;}
+.verde{ color:#060;}
+.limone{color:lime; }
+.arancione{ color:orange;}
+.bianco{ color:#fff;}
+.silver{ color:silver;}
+.grigiochiaro{ color:rgb(200,200,200);}
+.grigiomedio{ color:rgb(100,100,100);}
+.grigioscuro{}
+/* Font relativi in 'em' */
+.size0-6{ font-size:0.6em;}
+.size0-7{ font-size:0.7em;}
+.size0-8{ font-size:0.8em;}
+.size0-9{ font-size:0.9em;}
+.size1  { font-size:1em;  }
+.size1-1{ font-size:1.1em;}
+.size1-2{ font-size:1.2em;}
+.size1-3{ font-size:1.3em;}
+.size1-4{ font-size:1.4em;}
+.size1-5{ font-size:1.5em;}
+.size1-6{ font-size:1.6em;}
+.size1-7{ font-size:1.7em;}
+.size1-8{ font-size:1.8em;}
+.size1-9{ font-size:1.9em;}
+.size2  { font-size:2em;  }
+.size2-1{ font-size:2.1em;}
+.size2-2{ font-size:2.2em;}
+.size2-3{ font-size:2.3em;}
+.size2-4{ font-size:2.4em;}
+.size2-5{ font-size:2.5em;}
+.size2-6{ font-size:2.6em;}
+.size2-7{ font-size:2.7em;}
+.size2-8{ font-size:2.8em;}
+.size2-9{ font-size:2.9em;}
+.size3  { font-size:3em;  }
+/*	Fine Classi comuni */
+
+
+
+/*
+=============================================================
+Fine Default 320px: iPhone(devise) con orientamento portrait
+=============================================================
+------------------------------------------
+480px: iPhone con orientamento landscape	
+------------------------------------------
+*/
+@media screen and (min-width: 480px){ 
+
+/*	Elementi base	*/
+button{
+font-size:1em; padding:0.6em;
+}
+div.logoKaiPai{
+top:25px; left:50px; 
+}
+div.testoLogoKP{
+left:160px;  font-size:0.8em; 
+}
+span.titoloKP{
+font-size:2.5em;
+}
+span.sloganKP{
+font-size:0.8em; 
+}
+/*	Fine Elementi base	*/
+
+#pesoStaturaEta > section > div > span:first-child{
+width:31%; 	
+}
+
+#macronutrienti > div div:nth-child(1), #vitamine-minerali > div div:nth-child(1) {
+width:57%;	
+}
+
+}/* 
+===========================
+chiude "Media Query" 480px
+===========================
+--------------------------------------
+768px: iPad con orientamento portrait	
+--------------------------------------
+*/
+@media screen and (min-width: 768px){ 
+/*	Elementi base	*/
+body{
+background-color: rgb(250,200,100);  background-color: rgba(255,140,0, 0.6);
+background: -moz-linear-gradient(top, rgba(255,140,0, 0.6), white);
+background:-webkit-linear-gradient(top, rgba(255,140,0, 0.6), white);
+background: linear-gradient(top, rgba(255,140,0, 0.6), white);
+}
+#content{
+background-color:rgb(250,200,100); background-color:rgba(250,250,250, 0.4);
+background: -moz-linear-gradient(top, rgba(250,250,250, 0.4), white);
+background:-webkit-linear-gradient(top, rgba(250,250,250, 0.4), white);
+background: linear-gradient(top, rgba(250,250,250, 0.4), white);	z-index:1;
+}
+button{
+padding:0.4em;
+}
+div.logoKaiPai{
+left:150px; width:100px; height:100px;
+}
+div.testoLogoKP{
+top:50px; left:260px;
+}
+span.titoloKP{
+display:inline;
+font-size:3em;
+}
+span.sloganKP{
+font-size:0.9em;
+}
+/*
+footer{
+display:block; 
+}
+*/
+/*	Fine Elementi base	*/
+
+#pesoStaturaEta > section{
+width:60%; padding:1em;
+}
+
+#eliminazioneDieta button{
+width: 31%; 
+}
+
+
+#suggerimento{
+font-size:1em;
+}
+
+#content{
+padding:1em 5em;
+}
+
+#ceckCalorie div {
+width:50%;	
+}
+#fabbisogniEnergetici{
+font-size:0.9em; 
+}
+
+
+#btnRiprendiDieta{
+width:40%; margin-left:30%; 
+}
+
+#ceckCalorie a{
+font-size:1em;  
+}
+
+#macronutrienti{
+/*width:90%;*/font-size:0.9em;  
+}
+
+#vitamine-minerali{
+/*width:90%;*/ font-size:0.9em; 
+}
+div.infovm{
+border:none; font-size:0.7em; 
+}
+#macronutrienti > div div:nth-child(1), #vitamine-minerali > div div:nth-child(1) {
+width:57.5%;	
+}
+
+#mostraFMV{
+width:auto;	 
+}
+
+#memorizzaDieta > div{
+font-size:0.9em; 
+}
+#memorizzaDieta > button{
+width:31%; 
+}
+
+#alimVegan > button{
+width:32%; padding:0.4em;
+}
+
+#alimVegetariani > button{
+width:32%; padding:0.4em;
+}
+
+
+.catAlimenti{
+padding:0.4em;
+}
+
+#veganVegetariano > button{
+width:40%;
+}
+
+#colPranzoCena > button{
+display:inline; width:19%;	margin:0; font-size:0.8em;
+}
+
+div.divPasto{
+display: -webkit-flex;
+-webkit-flex-flow: row nowrap;
+display: flex;
+flex-flow: row nowrap;
+width:100%; border:1px solid #e5e5e5; 
+}
+
+div.divPasto > span{
+flex:auto; 
+font-size:0.9em; padding-left:0.2em; padding-top:0.1em;
+}
+
+
+} /*
+==========================
+chiude "Media Query" 768px
+==========================
+----------------------------------------------------------
+1024px: iPad con orientamento landscape (ma anche netbook)
+----------------------------------------------------------
+*/
+@media screen and (min-width: 1024px){
+/*	Elementi base	*/
+button{
+padding:0.3em;
+}
+div.logoKaiPai{
+left:200px;
+}
+div.testoLogoKP{
+left:310px;
+}
+span.titoloKP{
+font-size:3.5em;
+}
+span.sloganKP{
+font-size:1em;
+}
+#content{
+padding:1em 10em;
+}
+/*	Fine Elementi base	*/
+
+#pesoStaturaEta > section{
+width:50%;
+}
+
+#eliminazioneDieta button{
+width: 22%; 
+}
+
+
+#ceckCalorie div {
+width:40%;	
+}
+#fabbisogniEnergetici{
+font-size:1em; 
+}
+
+#memorizzaDieta > div{
+font-size:1em; 
+}
+#memorizzaDieta > button{
+width:25%; 
+}
+
+#btnRiprendiDieta{
+width:30%; margin-left:35%; 
+}
+
+div.divPasto > span{
+font-size:1em;
+}
+#veganVegetariano > button{
+width:31%;
+}
+
+#colPranzoCena > button{
+font-size:1em;
+}
+
+#macronutrienti > div div:nth-child(1), #vitamine-minerali > div div:nth-child(1) {
+width:58%;	
+}
+
+
+}/*
+============================
+chiude "Media Query" 1024px
+============================
+-------------------------------------------------
+desktop (risoluzione Windows my pc: 1280 x 720 )
+-------------------------------------------------
+*/
+@media screen and (min-width: 1270px){
+/*	Elementi base	*/
+#content{
+padding:1em 14em;
+}
+div.logoKaiPai{
+left:320px;
+}
+div.testoLogoKP{
+left:430px;
+}
+span.titoloKP{
+font-size:4em;
+}
+span.sloganKP{
+font-size:1.1em; 
+}
+
+/*	Fine Elementi base	*/
+
+#eliminazioneDieta button{
+width: 20%; 
+}
+
+
+#memorizzaDieta > button{
+width:20%; 
+}
+
+#macronutrienti > div div:nth-child(1), #vitamine-minerali > div div:nth-child(1) {
+/*width:58.5%;	*/
+}
+
+}/*
+============================
+chiude "Media Query" 1270px
+============================
+-------------------------------------------------
+desktop : grandi monitor > 1300 px 
+-------------------------------------------------
+*/
+
+@media screen and (min-width: 1410px){
+/*	Elementi base	*/
+header, main, footer, aside{
+width:1410px;			/* si blocca la larghezza per dimensioni 'width' superiori a 1410px */
+margin:0 auto;
+}
+
+/*	Fine Elementi base	*/
+
+} /*
+============================
+chiude "Media Query" 1300px
+============================
+*/
+
+
+

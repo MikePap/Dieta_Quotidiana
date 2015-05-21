@@ -1,0 +1,118 @@
+[
+	{
+		"altezza": 150,
+		"normale": [43, 56],
+		"sovrappeso": [58, 67.50],
+		"obeso": [70, 79]
+	},
+	{
+		"altezza": 152,
+		"normale": [44, 56],
+		"sovrappeso": [58, 67.50],
+		"obeso": [70, 81.50]
+	},
+	{
+		"altezza": 155,
+		"normale": [45.50, 57.50],
+		"sovrappeso": [60, 70],
+		"obeso": [72, 84]
+	},
+	{
+		"altezza": 157,
+		"normale": [47, 59.50],
+		"sovrappeso": [62,72],
+		"obeso": [74.50, 87]
+	},
+	{
+		"altezza": 160,
+		"normale": [48.50, 61.50],
+		"sovrappeso": [64, 74],
+		"obeso": [76.50, 90]
+	},
+	{
+		"altezza": 162,
+		"normale": [50, 63.50],
+		"sovrappeso": [66, 76.50],
+		"obeso": [79, 92.50]
+	},
+	{
+		"altezza": 165,
+		"normale": [51.50, 65.50],
+		"sovrappeso": [68, 79],
+		"obeso": [81.50, 95.50]
+	},
+	{
+		"altezza": 167,
+		"normale": [53.50, 67.50],
+		"sovrappeso": [70, 81.50],
+		"obeso": [84, 98]
+	},
+	{
+		"altezza": 170,
+		"normale": [55, 69.50],
+		"sovrappeso": [72, 83.50],
+		"obeso": [86.50, 101]
+	},
+	{
+		"altezza": 172,
+		"normale": [56.50, 71.50],
+		"sovrappeso": [74.50, 86.50],
+		"obeso": [89.50, 104]
+	},
+	{
+		"altezza": 175,
+		"normale": [58, 73.50],
+		"sovrappeso": [76.50, 89],
+		"obeso": [92, 107]
+	},
+	{
+		"altezza": 177,
+		"normale": [60, 75.50],
+		"sovrappeso": [79, 91.50],
+		"obeso": [94.50, 110]
+	},
+	{
+		"altezza": 180,
+		"normale": [61.50, 78],
+		"sovrappeso": [81, 94],
+		"obeso": [97, 114]
+	},
+	{
+		"altezza": 182,
+		"normale": [63.50, 80],
+		"sovrappeso": [83.50, 96.50],
+		"obeso": [100, 117]
+	},
+	{
+		"altezza": 185,
+		"normale": [65, 82],
+		"sovrappeso": [85.50, 99.50],
+		"obeso": [102.50, 120]
+	},
+	{
+		"altezza": 187,
+		"normale": [67, 84.50],
+		"sovrappeso": [88, 102],
+		"obeso": [105.50, 123]
+	},
+	{
+		"altezza": 190,
+		"normale": [68.50, 86.50],
+		"sovrappeso": [90, 104.50],
+		"obeso": [108.50, 126.50]
+	},
+	{
+		"altezza": 192,
+		"normale": [70.50, 90],
+		"sovrappeso": [92.50, 107.50],
+		"obeso": [111, 130]
+	},
+	{
+		"altezza":195,
+		"normale": [72.50, 91.50],
+		"sovrappeso": [95, 110.50],
+		"obeso": [114, 133]
+	}
+]
+
+
