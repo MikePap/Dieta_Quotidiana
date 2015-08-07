@@ -1,10 +1,12 @@
 # Dieta quotidiana personalizzata
 
-L'applicazione permette sia di controllare la propria dieta, per verificare i nutrienti assunti nei pasti, sia di creare una dieta ideale personalizzata da seguire in base ai propri fabbisogni. <br>In altre parole: "Non c'è più bisogno di andare dal vostro dietologo"
+L'applicazione permette sia di controllare la propria dieta, per verificare i nutrienti assunti nei pasti (compreso le calorie), sia di creare una dieta ideale personalizzata da seguire in base ai propri fabbisogni. <br>In altre parole: "Non c'è più bisogno di andare dal vostro dietologo"
 
 <h2>I Nutrienti</h2>
 
 I nutrienti sono la vita. Ci garantiscono il ricambio dei tessuti, la fornitura dell'energia e lo svolgimento di tutti i processi metabolici vitali. Una loro carenza o eccesso provoca problemi più o meno gravi.<br />
+I nutrienti sono suddivisi in sette grandi gruppi: carboidrati, proteine, grassi, fibre, minerali, vitamine e sostanze fitochimiche. <br>
+Solo alcuni di questi nutrienti, denominati <b>macronutrienti</b>, hanno un ruolo energetico, cioè apportano calorie: sono <em>carboidrati, proteine e grassi</em>. Gli altri nutrienti non apportano direttamente energia, ma alcuni di loro entrano egualmente nel metabolismo energetico, come alcuni minerali e vitamine.
 <h3>Come funziona l'applicazione?</h3>
 Iniziate col cliccare sul pulsante <q>Scegli i pasti</q>; vi saranno mostrati  cinque pulsanti rappresentanti i pasti della giornata: "Colazione", "SpuntinoAM", "Pranzo", "SpuntinoPM" e "Cena".  Dopo aver cliccato sul pasto interessato vi appariranno le categorie degli alimenti: "Cereali", "Legumi", ecc.. per un totale di 12 categorie. In ogni categoria ci sono gli alimenti che fanno parte dei nostri archivi.  
 Dopo aver selezionato uno o più alimenti noterete due pulsanti: "Dieta in pausa" e "Elimina dieta". Il primo vi dà la possibilità di ripristinare gli alimenti scelti se, nel caso, chiudete l'applicazione. In pratica, anche se la dieta non è completata, cliccando sul pulsante non fate altro che memorizzare quella parte di dieta per poi riprenderla in un secondo momento.
