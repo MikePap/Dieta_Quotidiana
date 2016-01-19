@@ -89,14 +89,23 @@ var aggiornaPagina = document.getElementById('aggiornaPagina');
 // Visualizzazione box calcola calorie
 showBoxCFC.addEventListener('click', function(){
 	ceckCalorie.style.display = 'none';
-	pesoStaturaEta.style.display = "block";	
+	scuro.style.display = "block";
+	pesoStaturaEta.style["top"] = 0;
+	pesoStaturaEta.style["transition"] = "top 300ms ease-out";	
 },false);
+
 
 // Nasconde il box calcola calorie 
 xBoxCalcolaCalorie.addEventListener('click', function(){
-	pesoStaturaEta.style.display ="none";
+	pesoStaturaEta.style["top"] = "-500px";
+	pesoStaturaEta["transition"] = "top 500ms ease-in 200ms";
 	ceckCalorie.style.display = "block";
+	scuro.style.display = "none";
 },false);
+
+//	spiegaz.style["top"] = "-1000px";
+//	spiegaz.style["transition"] = "top 500ms ease-in 200ms";
+
 
 // Aggiorna la pagina dopo aver completato il form 
 aggiornaPagina.addEventListener('click', function(){

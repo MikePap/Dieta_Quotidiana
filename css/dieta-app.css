@@ -62,7 +62,10 @@ font-family: Tahoma, Geneva, sans-serif,  Palatino, Times, serif; text-align:lef
 background-color: rgb(255,185,94);   
 }
 header{
-position:relative; margin:0 auto; width:100%; height:150px; background-color: rgb(255,185,94);  z-index:2; 
+position:relative; margin:0 auto; width:100%; height:150px; 
+background-color: rgb(255,185,94);  z-index:2; 
+-webkit-box-shadow: 0 10px 6px -8px #777;
+box-shadow: 0 8px 6px -8px #777;
 }
 div.logoKaiPai{
 position:absolute; top:25px; left:31px; width:100px; height:100px;	
@@ -136,11 +139,16 @@ color:#444;
 position:absolute; top:0; right:0; width:1.5em; font-size:2.5em; text-align:center; 
 background:rgb(80,80,80); color:#fff;
 font-weight:bold; border:5px double	#fff; border-radius:1.5em; z-index:14; cursor:pointer; 
+-webkit-box-shadow: 0 3px 8px -5px #000;
+box-shadow:         0 3px 8px -5px #000;
 }
 
 #spiegaz{
 position:absolute; top:-1000px; left:0;
-width:auto;  padding:0.5em; font-size:15px; color:#ff0; background:rgb(80,80,80);  border:1px solid #fff; border-radius:6px; z-index:15; /*display:none;*/
+width:auto;  padding:0.5em; font-size:15px; color:#ff0; background:rgb(80,80,80);  
+border:1px solid #fff; border-radius:6px; z-index:25; /*display:none;*/
+-webkit-box-shadow: 0 10px 6px -8px #777;
+box-shadow: 0 10px 6px -8px #777;
 }
 
 
@@ -154,8 +162,10 @@ color:lime;
 }
 
 #pesoStaturaEta{
-position:absolute; top:0; left:0;  
-width:100%; margin:0;  font-size:0.85em; color:#ff0; background:#444; z-index:60; display:none;
+position:absolute; top:-500px; left:0; /*top:0; left:0;*/  
+width:100%; margin:0;  font-size:0.85em; color:#ff0; background:#444; z-index:60; /*display:none;*/
+-webkit-box-shadow: 0 10px 6px -6px #777;
+box-shadow: 0 10px 6px -6px #777;
 }
 #pesoStaturaEta > section{
 margin:0 auto; width:100%; padding:1em 0.5em;
@@ -174,7 +184,9 @@ width:100%;
 }
 
 #xBoxCalcolaCalorie{
-width:1.5em; margin:0.2em 2px 0  auto; text-align:center;	font-size:3em;	border:1px solid; color:#00f; border-radius:5px; cursor:pointer; font-weight:bold; 
+width:1.5em; margin:0.2em 2px 0  auto; text-align:center;	font-size:3em; background:#333;	
+border:1px solid; color:#f00; border-radius:5px; cursor:pointer; font-weight:bold; 
+
 }
 #xBoxCalcolaCalorie:hover {
 color:#0f0; 
@@ -193,7 +205,7 @@ position: fixed; top:2px; bottom:auto; left:0; right:0; display:none; z-index:44
 }
 
 #scuro{
-position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:20; display:none;
+position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:20; display:none;
 }
 
 #eliminazioneDieta{
@@ -203,7 +215,7 @@ width:100%; height:3em;  text-align:center;   z-index:25; display:none;  /*borde
 }
 
 #eliminazioneDieta button{
-display: inline-block; width:48%; 
+display: block; width:100%; color: #660000;
 }
 
 
@@ -227,13 +239,17 @@ width:100%; padding:0.5em; font-size:0.9em;
 }
 
 #memorizzaDieta{
-width:100%; margin-top:0; text-align:center;  display:none;
+width:100%; margin-top:0.2em; text-align:center;  display:none;
 }
 #memorizzaDieta > div{
 /*display:none;*/ text-align:left; font-size:0.9em; padding:0.4em 0.3em; border: 4px double #ff0; border-radius:3px;
 }
 #memorizzaDieta > button{
-width:100%;
+width:100%; color:#777;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #b3b3b3 100%); 
+background: -webkit-linear-gradient(top,  #ffffff 0%,#b3b3b3 100%); 
+background: linear-gradient(to bottom,  #ffffff 0%,#b3b3b3 100%); 
 }
 #noMemorizzarla{
 /*display:none;*/
@@ -241,7 +257,11 @@ width:100%;
 
 
 #btnRiprendiDieta{
-display:none; width:100%; font-size:1em;
+display:none; width:100%; font-size:1em; color:#777;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #b3b3b3 100%); 
+background: -webkit-linear-gradient(top,  #ffffff 0%,#b3b3b3 100%); 
+background: linear-gradient(to bottom,  #ffffff 0%,#b3b3b3 100%); 
 }
 
 #storeSpan{
@@ -249,7 +269,7 @@ display:none;
 }
 
 #pastiScelti{
-width:100%; padding:0.5em; 
+width:100%; /*padding:0.5em; */
 }
 #pastiScelti div > span {
 display: inline-block; width:14%;
@@ -320,7 +340,13 @@ border:none; font-size:0.6em;
 }
 
 #boxMmostraFVM{
-width:100%; 
+width:100%; text-align: center; padding: 0.8em; cursor: pointer;
+color: #7f8000;
+border:1px solid #ffd9b3;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #ffd9b3 100%); 
+background: -webkit-linear-gradient(top,  #ffffff 0%,#ffd9b3 100%); 
+background: linear-gradient(to bottom,  #ffffff 0%,#ffd9b3 100%); 
 }
 #mostraFMV{
 width:100%;	font-size:1em;
@@ -328,7 +354,7 @@ width:100%;	font-size:1em;
 
 
 #veganVegetariano{
-width:100%; margin-top:0.5em;  text-align:center; 
+width:100%; /*margin-top:0.5em;*/  text-align:center; 
 }
 #veganVegetariano > button{
 width:100%; 
@@ -535,6 +561,9 @@ width:60%; padding:1em;
 #eliminazioneDieta button{
 width: 31%; 
 }
+#eliminazioneDieta button{
+display: inline-block; width:48%; 
+}
 
 
 #suggerimento{
@@ -600,7 +629,7 @@ padding:0.4em;
 }
 
 #veganVegetariano > button{
-width:40%;
+width:40%; margin-top:0.5em;
 }
 
 #colPranzoCena > button{
@@ -619,7 +648,9 @@ div.divPasto > span{
 flex:auto; 
 font-size:0.9em; padding-left:0.2em; padding-top:0.1em;
 }
-
+#pastiScelti{
+padding:0.5em;
+}
 
 } /*
 ==========================

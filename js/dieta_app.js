@@ -1,20 +1,41 @@
-// dieta2.js 			
+// dieta_app.js 			
 
-// Gestione elemento punto interrogativo per aiuto su 'Consigli utuili'
+// Gestione del mousedown e mouseup su pulsante "Consigli Utili" (?)
+function pulsantePremuto(pulsante){
+	pulsante.style["boxShadow"] = "0 3px 18px -5px #000";
+}
+
+function pulsanteRilasciato(pulsante){
+	pulsante.style["boxShadow"] = "0 3px 8px -5px #000";
+}
+function eventPulsante(elem, evento, funzione){
+//	var elem = document.querySelector(elem);
+	elem.addEventListener(evento, function (e){
+		funzione(e.target);
+	},false);
+}
+
+// Gestione elemento punto interrogativo per aiuto su 'Consigli utili'
 var interrogativo = document.getElementById('int');
 var spiegaz = document.getElementById('spiegaz');
 var xInfo = document.getElementById('xInfo');
+
+eventPulsante(interrogativo, "mousedown", pulsantePremuto);
+eventPulsante(interrogativo, "mouseup", pulsanteRilasciato);
+
  
 interrogativo.addEventListener('click', function(){
 //	this.style.display = "none";
+//	premuto(interrogativo);
 	spiegaz.style["top"] = 0;
-	spiegaz.style["transition"] = "top 500ms ease-out"; 
-//	spiegaz.style.display = "block";
+	spiegaz.style["transition"] = "top 300ms ease-out"; 
+	scuro.style.display = "block";
 },false);
 
 
 xInfo.addEventListener("click", function (){
 //	spiegaz.style.display = "none";
+	scuro.style.display = "none";
 	spiegaz.style["top"] = "-1000px";
 	spiegaz.style["transition"] = "top 500ms ease-in 200ms";
 	interrogativo.style.display = "block";
@@ -36,7 +57,8 @@ var pastiScelti = document.getElementById("pastiScelti");
 var suggerimento = document.getElementById('suggerimento');
 var vitMin = document.getElementById('vitamine-minerali');
 var alimentiAlcol = document.getElementById('alimentiAlcol');						// conserva valori alcol di birra, vinoBianco e vinoRosso
-var mostraFMV = document.getElementById('mostraFMV');			
+//var mostraFMV = document.getElementById('mostraFMV');
+var mostraFMV = document.getElementById('boxMmostraFVM');			
 var memDieta = document.getElementById('memorizzaDieta');
 var btnCancellaDieta = document.getElementById('btnCancellaDieta');				// id="btnmemorizzaDieta" ---> id="btnCancellaDieta"
 var btnDietaPausa = document.getElementById('btnDietaPausa');
@@ -65,7 +87,6 @@ if(mieCalorie){
 	document.body.appendChild(df);
 }
 
-
 var needCarboidrati = (mieCalorie * 0.65 / 4).toFixed(0);
 var needProteine = (mieCalorie * 0.10 / 4).toFixed(0);
 var needGrassi = (mieCalorie * 0.25 / 9).toFixed(0);
@@ -78,7 +99,7 @@ macronutrienti.children[3].children[1].innerHTML = needGrassi;
 macronutrienti.children[4].children[1].innerHTML = mieCalorie;
 
 // Impostazione dei fabbisogni di fibre, minerali e vitamine
-var fFibre = 25;													// valore fisso fabbisogno giornaliero 20-30 grammi
+var fFibre = 25;										// valore fisso fabbisogno giornaliero 20-30 grammi
 var fSodio = localStorage.getItem('sodio');				// valore settato in "calcola_calorie.html"
 var fPotassio = localStorage.getItem('potassio');
 var fFerro = localStorage.getItem('ferro');
@@ -172,8 +193,8 @@ function storePasti(){
 	btnRiprendiDieta.style.display = 'none';
 
 //	Creazione elementi che rappresenteranno gli alimenti selezionati
-	var pasto = sessionStorage.getItem("pasto");									// il tipo di pasto (colazione, spuntino, pranzo ecc...)
-	var alimentoScelto = sessionStorage.getItem("NomeAlimento");					// alimento scelto in base ad una categoria
+	var pasto = sessionStorage.getItem("pasto");						// il tipo di pasto (colazione, spuntino, pranzo ecc...)
+	var alimentoScelto = sessionStorage.getItem("NomeAlimento");		// alimento scelto in base ad una categoria
 	var fabproteine = parseFloat(sessionStorage.getItem("mproteine"));
 	var fabgrassi = parseFloat(sessionStorage.getItem("mgrassi"));
 	var fabcarbo = parseFloat(sessionStorage.getItem("mcarbo"));
@@ -282,7 +303,8 @@ function insertVal(spanProp, nm, fabbisogno){
 		rc = parseFloat(val.firstChild.nodeValue);
 		nc = nc+rc;
 //		macronutrienti.children[nm].innerHTML = nc.toFixed(2);								// 
-		macronutrienti.children[nm].children[2].innerHTML = nc.toFixed(2);
+//		macronutrienti.children[nm].children[2].innerHTML = nc.toFixed(2);
+		macronutrienti.children[nm].children[2].innerHTML = nc.toFixed(0);		
 		if(fabbisogno){
 //			allarmeRosso(nc,fabbisogno,macronutrienti.children[nm]);
 			allarmeRosso(nc,fabbisogno,macronutrienti.children[nm].children[2]);
@@ -291,7 +313,9 @@ function insertVal(spanProp, nm, fabbisogno){
 }//
 
 function insertVal2(spanProp, nm, dec){
-//	Somma dei valori di ogni proprietà contenuti nel parametro spanProp, che fa riferimento agli <span>  creati nella funzione 'storePasti()', ed inserimento di tali valori nell'apposito <div> all'interno di <div id='vitamine-minerali'>
+/*	Somma dei valori di ogni proprietà contenuti nel parametro spanProp, che fa riferimento agli <span>  creati nella funzione 'storePasti()', 
+ed inserimento di tali valori nell'apposito <div> all'interno di <div id='vitamine-minerali'>
+*/
 	var valore = document.querySelectorAll(spanProp);								// es: 'span.valCarbo'
 	var rc, nc=0;
 	for(var ci=0, val; val=valore[ci]; ci++){
@@ -303,7 +327,10 @@ function insertVal2(spanProp, nm, dec){
 }//
 
 function insetValAlcol(spanProp, nm, dec){
-// Somma dei valori di ogni proprietà contenuti nel parametro spanProp, che fa riferimento agli <span>  creati nella funzione 'storePasti()', ed inserimento di tali valori nell'apposito <div> all'interno di <div id='alimentiAlcol'>
+/* 
+Somma dei valori di ogni proprietà contenuti nel parametro spanProp, che fa riferimento agli <span>  creati nella funzione 'storePasti()', 
+ed inserimento di tali valori nell'apposito <div> all'interno di <div id='alimentiAlcol'>
+*/
 	var valore = document.querySelectorAll(spanProp);								// es: 'span.valCarbo'
 	var rc, nc=0;
 	for(var ci=0, val; val=valore[ci]; ci++){
@@ -432,13 +459,13 @@ function showRisultati() {
 			insertVal('span.valproteine', 2, needProteine);
 			insertVal('span.valgrassi', 3, needGrassi);
 
-			insertVal2('span.valfibre', 0, 2);
-			insertVal2('span.valsodio', 1, 2);
-			insertVal2('span.valpotassio', 2, 2);
+			insertVal2('span.valfibre', 0, 0);
+			insertVal2('span.valsodio', 1, 0);
+			insertVal2('span.valpotassio', 2, 0);
 			insertVal2('span.valferro', 3, 2);
-			insertVal2('span.valcalcio', 4, 2);
-			insertVal2('span.valfosforo', 5, 2);
-			insertVal2('span.valmagnesio', 6, 2);
+			insertVal2('span.valcalcio', 4, 0);
+			insertVal2('span.valfosforo', 5, 0);
+			insertVal2('span.valmagnesio', 6, 0);
 			insertVal2('span.valzinco', 7, 2);
 			insertVal2('span.valrame', 8, 2);
 			insertVal2('span.valselenio', 9, 3);
