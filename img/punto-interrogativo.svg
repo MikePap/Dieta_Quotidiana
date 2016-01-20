@@ -1,0 +1,27 @@
+<svg fill="#000000" width="100" height="100" viewBox="0 0 100 100" id="svgPI"  xmlns="http://www.w3.org/2000/svg">
+	<g id="puntoInterrogativo" stroke ="#ff0000">
+		<path d="m 32.830821,32.495812 c 0,0 -0.349926,-11.795198 9.882747,-15.745393 6.932482,-2.676198 17.737839,-0.464835 22.110553,6.197656 3.251222,4.953729 3.107717,12.828817 -0.670017,18.42546 -4.522614,6.700167 -10.887772,10.050251 -13.567839,14.740368 -1.79745,4.614577 -1.225241,7.996865 -1.340034,11.222781" 
+			style="fill:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+		/>
+		<path id="path6" d="m 49.152901,72.693804 0,10.789966"
+				style="fill:none;stroke-width:8.30976582;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+			/>
+	</g>
+
+	<script type="application/ecmascript"> <![CDATA[
+		var puntoInterrogativo = document.getElementById("puntoInterrogativo"); 
+		var svgPI = document.getElementById("svgPI"); 
+		svgPI.addEventListener("mouseover", function(){ 
+			puntoInterrogativo.setAttribute('stroke', '#00ff00');
+		},false);
+
+		svgPI.addEventListener("mouseout", function(){ 
+			puntoInterrogativo.setAttribute('stroke', '#ff0000');
+		},false);
+	]]> </script>
+</svg>
+<!--
+creazione di un punto interrogativo "?" come simbolo di informazioni
+-->	
+
+
