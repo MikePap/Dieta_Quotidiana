@@ -8,6 +8,15 @@ function pulsantePremuto(pulsante){
 function pulsanteRilasciato(pulsante){
 	pulsante.style["boxShadow"] = "0 3px 8px -5px #000";
 }
+
+function mostraBlock(elemento){
+	elemento.style['display'] = 'block';
+}
+
+function nascondiNone(elemento){
+	elemento.style['display'] = 'none';
+}
+
 function eventPulsante(elem, evento, funzione){
 //	var elem = document.querySelector(elem);
 	elem.addEventListener(evento, function (e){
@@ -19,26 +28,26 @@ function eventPulsante(elem, evento, funzione){
 var interrogativo = document.getElementById('int');
 var spiegaz = document.getElementById('spiegaz');
 var xInfo = document.getElementById('xInfo');
+var scuro = document.getElementById('scuro');
 
 eventPulsante(interrogativo, "mousedown", pulsantePremuto);
 eventPulsante(interrogativo, "mouseup", pulsanteRilasciato);
 
  
 interrogativo.addEventListener('click', function(){
-//	this.style.display = "none";
-//	premuto(interrogativo);
+
 	spiegaz.style["top"] = 0;
-	spiegaz.style["transition"] = "top 300ms ease-out"; 
-	scuro.style.display = "block";
+	spiegaz.style["transition"] = "top 300ms ease-out 200ms"; 
+	setTimeout("mostraBlock(scuro);", 500);	
 },false);
 
 
 xInfo.addEventListener("click", function (){
-//	spiegaz.style.display = "none";
-	scuro.style.display = "none";
+	setTimeout("nascondiNone(scuro);", 500);	
 	spiegaz.style["top"] = "-1000px";
 	spiegaz.style["transition"] = "top 500ms ease-in 200ms";
-	interrogativo.style.display = "block";
+	interrogativo.style['display'] = "block";			// per chi non supporta il flex	
+	interrogativo.style['display'] = "flex";
 },false);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +75,7 @@ var btnRiprendiDieta = document.getElementById('btnRiprendiDieta');
 var eliminazioneDieta = document.getElementById('eliminazioneDieta');
 var confermaX = document.getElementById('confermaX');
 var annullaX = document.getElementById('annullaX');
-var scuro = document.getElementById('scuro');
+
 
 // Controllo se è stato eseguito il calcolo del fabbisogno calorico ed eventuale caricamento del file "calcola_calorie_app.js" 
 var mieCalorie = localStorage.getItem('mieCalorie');

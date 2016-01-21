@@ -141,17 +141,21 @@ background:rgb(80,80,80); color:#fff; overflow: hidden;
 border:5px double	#fff; border-radius:1.5em; z-index:14; cursor:pointer; 
 -webkit-box-shadow: 0 3px 8px -5px #000;
 box-shadow:         0 3px 8px -5px #000;
+display: block;           /*  per chi non supporta il flex  */
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+-webkit-align-items:center; -webkit-justify-content: center; 
+-ms-align-items:center; -ms-justify-content: center;
+align-items: center;	justify-content: center;
 }
 #int > div{
-width:100%; height:100%; text-align:center; font-size:2em; font-weight:bold;
-position: absolute;
-margin: auto;
-left: 0; right: 0; bottom:0; top:0;
+text-align:center; font-size:1.8em; font-weight:bold; 
 }
 
 
 #spiegaz{
-position:absolute; top:-1000px; left:0;
+position:absolute; top:-1000px; left:0; 
 width:auto;  padding:0.5em; font-size:15px; color:#ff0; background:rgb(80,80,80);  
 border:1px solid #fff; border-radius:6px; z-index:25; /*display:none;*/
 -webkit-box-shadow: 0 10px 6px -8px #777;
@@ -160,12 +164,22 @@ box-shadow: 0 10px 6px -8px #777;
 
 
 #xInfo{
-margin:0.1em 0 0 auto; width:1.3em; font-size:1.5em; text-align:center; 
+margin:0.1em 0 0 auto; width:2em; height:2em; text-align:center; 
 background:#555; color:red; 
 border: 2px solid; border-radius:1em; cursor:pointer;
+display: block;           /*  per chi non supporta il flex  */
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+-webkit-align-items:center; -webkit-justify-content: center; 
+-ms-align-items:center; -ms-justify-content: center;
+align-items: center;	justify-content: center;
 }
 #xInfo:hover{
 color:lime;
+}
+#xInfo > div{
+font-size:1.2em; font-weight:bold; text-align:center; 
 }
 
 #pesoStaturaEta{
@@ -383,14 +397,23 @@ width:100%; /*margin-top:0.2em; padding:0.8em;*/
 }
 
 .xChiudiCatAlimenti{
-margin:0.1em 0 0 auto; width:1.3em; font-size:1.5em; text-align:center; 
-background:#555; color:#fff; font-weight:bold;
+margin:0.1em 0 0 auto; width:2em; height:2em; text-align:center; 
+background:#555; color:#f00; font-weight:bold;
 border: 2px solid #e5e5e5; border-radius:1.5em; cursor:pointer;
+display: block;           /*  per chi non supporta il flex  */
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+-webkit-align-items:center; -webkit-justify-content: center; 
+-ms-align-items:center; -ms-justify-content: center;
+align-items: center;	justify-content: center;
 }
 .xChiudiCatAlimenti:hover{
-color:#f00;
+color:#0f0;
 }
-
+.xChiudiCatAlimenti > div{
+font-size:1.2em; font-weight:bold; text-align:center;  
+}
 
 #alimentiDiCateg{
 width:100%; margin:0; display:none;
