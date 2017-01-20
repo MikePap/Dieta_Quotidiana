@@ -319,7 +319,7 @@ width:20%;	 text-align:center; background:rgb(245,230,210); color:green;
 #macronutrienti > div div:nth-child(3){
 width:20%;	 text-align:center; background:#90ee90; text-align:center; color:#4d4d4d; 
 }
-#macronutrienti  div:nth-child(1) div:nth-child(2), #macronutrienti  div:nth-child(1) div:nth-child(3) {
+#macronutrienti  div:nth-child(1) > div{
 background:rgb(145,130,110); color:#fff; 
 }
 #macronutrienti  > div:nth-child(5) div{
