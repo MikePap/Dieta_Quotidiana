@@ -127,7 +127,7 @@ function creaElementi(name, attributi, stili) {
 }//
 
 //	Crea una <select> i cui <option> possono avere solo valori numerici
-function creaLista(nome,perSeleziona,a,b,c,valore){
+function creaLista(nome,perSeleziona,cinqueGrammi,a,b,c,valore){
 	var node = document.createElement('select');
 	node.setAttribute('class', nome);		
 	var optionSeleziona = document.createElement('option');
@@ -135,6 +135,11 @@ function creaLista(nome,perSeleziona,a,b,c,valore){
 	var seleziona = document.createTextNode(perSeleziona);
 	optionSeleziona.appendChild(seleziona);
 	node.appendChild(optionSeleziona);
+
+	var optionCinqueGrammi = document.createElement('option');
+	var valCinque = document.createTextNode(cinqueGrammi);
+	optionCinqueGrammi.appendChild(valCinque);
+	node.appendChild(optionCinqueGrammi);
 
 	for(var i=a; i< b; i+=c){
 		var opzione = document.createElement('option');
@@ -358,7 +363,7 @@ function storePasti(obj){
 	var spanPasto = creaElementi('span',null,{'display':'none'}, pasto);		// (colazione, spuntinoAM ...)
 
 	var nomeAlimento = creaElementi('span', {}, {'display':'inline-block','width':'70%'}, alimentoScelto );
-	var lista =	creaLista('porzioneGrammi','gr.',10,300,10, 0);
+	var lista =	creaLista('porzioneGrammi','gr.',5,10,300,10, 0);
 	var spanAlimenti = creaElementi('span', obj ,{'display':'inline-block','width':'20%'},lista);	// spanAlimenti oltre a contenere la <select> "lista" contiene i nutrienti di base estratti dal json  
 	var btnChiudi = creaElementi('button', {'class':'annullaPasto'},{'display':'inline-block', 'width':'8%'}, 'X' );
 	divPasto.appendChild(spanPasto);
@@ -731,7 +736,7 @@ function storeListaPasti(listaoggetti) {
 		var spanPasto = creaElementi('span',null,{'display':'none'}, pasto);		// (colazione, spuntinoAM ...)
 
 		var nomeAlimento = creaElementi('span', {}, {'display':'inline-block','width':'70%'}, alimento );
-		var lista =	creaLista('porzioneGrammi','gr.',10,300,10, grammi);
+		var lista =	creaLista('porzioneGrammi','gr.',5,10,300,10, grammi);
 
 		var spanAlimenti = creaElementi('span', obj ,{'display':'inline-block','width':'20%'},lista);	// spanAlimenti oltre a contenere la <select> "lista" contiene i nutrienti di base estratti dal json  
 
